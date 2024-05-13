@@ -1,0 +1,1 @@
+require('http').createServer((_, res) => require('fs').readFile('index.html', (_, data) => res.end(data))).listen(8888);
