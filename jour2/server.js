@@ -1,5 +1,3 @@
-// server.js
-
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
@@ -11,7 +9,31 @@ const server = http.createServer((req, res) => {
     if (method === 'GET' && path === '/tasks') {
         // Votre code existant
     } else if (method === 'POST' && path === '/tasks') {
-        // Votre code existant
+        let body = '';
+        req.on('data', chunk => {
+            body += chunk.toString();
+        });
+        req.on('end', () => {
+            const newTask = JSON.parse(body);
+            fs.readFile('data.json', 'utf8', (err, data) => {
+                if (err) {
+                    res.statusCode = 500;
+                    res.end('Erreur de lecture du fichier');
+                } else {
+                    const tasks = JSON.parse(data).tasks;
+                    tasks.push(newTask);
+                    fs.writeFile('data.json', JSON.stringify({ tasks }), err => {
+                        if (err) {
+                            res.statusCode = 500;
+                            res.end('Erreur d\'écriture dans le fichier');
+                        } else {
+                            res.statusCode = 201;
+                            res.end('Tâche créée avec succès');
+                        }
+                    });
+                }
+            });
+        });
     } else if (method === 'PUT' && path.startsWith('/tasks/')) {
         const id = path.split('/')[2];
         let body = '';
