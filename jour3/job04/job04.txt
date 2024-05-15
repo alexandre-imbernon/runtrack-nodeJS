@@ -1,0 +1,21 @@
+Ajoutez les documents suivants à votre collection “product” :
+➔ name ⇒ “Pantalon noir”, description ⇒ “Un pantalon noir”, price ⇒ 14,99,
+quantity ⇒ 12
+➔ name ⇒ “chaussettes”, description ⇒ “chaussettes cool !”, price ⇒ 6,
+quantity ⇒ 6
+
+FAIT :
+
+db.product.insertOne({
+name: "Pantalon noir",
+description: "Un pantalon noir",
+price: 14.99,
+quantity: 12})
+
+///
+
+db.product.insertOne({
+name: "chaussettes",
+description: "chaussettes cool!",
+price: 6,
+quantity: 6})

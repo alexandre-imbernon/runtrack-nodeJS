@@ -1,0 +1,5 @@
+Écrire une requête permettant d’afficher seulement deux catégories.
+
+FAIT :
+
+db.category.find().limit(2)

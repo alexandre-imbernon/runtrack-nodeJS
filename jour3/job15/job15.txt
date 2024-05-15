@@ -1,0 +1,10 @@
+Changer le nom de la catégorie “bébé” en “Vêtements pour enfant”.
+
+FAIT :
+
+db.category.updateOne(
+  { "name": "bébé" }, 
+  { $set: { "name": "Vêtements pour enfant" } } 
+)
+
+(J'ai modifié auparavant 3 par bébé, et ensuite j'ai fait le job 15)

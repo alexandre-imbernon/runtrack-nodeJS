@@ -1,0 +1,5 @@
+Récupérer une catégorie à l’aide de son id.
+
+FAIT :
+
+db.product.find({_id: ObjectId('664483be6db91d6031573c2c')})

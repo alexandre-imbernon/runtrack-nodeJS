@@ -1,0 +1,7 @@
+À l’aide d’une ligne de commande, afficher l’ensemble des collections de
+votre base de données. Si tout s'est bien passé, vous devriez avoir ce
+message dans le terminal :
+
+FAIT :
+
+show collections

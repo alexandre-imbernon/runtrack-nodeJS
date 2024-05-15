@@ -1,0 +1,28 @@
+Créer une relation entre la collection “product” et “category” à l’aide d’un
+champ nommé “category_id”.
+Modifier et récupérer l’ensemble des produits et leurs catégories.
+
+FAIT :
+
+db.product.updateOne(
+   { _id: ObjectId('66446e2de507b9dcfd6aad31') },
+   { $set: { "category_id" : ObjectId("6644735ee507b9dcfd6aad36") } }
+)
+
+Ensuite : 
+
+db.product.aggregate([
+   {
+      $lookup:
+         {
+           from: "category",
+           localField: "category_id",
+           foreignField: "_id",
+           as: "category"
+         }
+   },
+   { $unwind: "$category" },
+   {
+      $match: { "category.name": "chaussure" }
+   }
+])

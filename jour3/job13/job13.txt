@@ -1,0 +1,5 @@
+Récupérer l’ensemble des produits sans leurs id.
+
+FAIT :
+
+db.collectionName.find({}, { _id: 0 })

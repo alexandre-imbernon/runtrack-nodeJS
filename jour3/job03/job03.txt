@@ -1,0 +1,19 @@
+Utiliser le terminal MongoSH pour créer une base de données nommée
+“shop”.
+Ajouter une collection nommée “product” et possédant les champs suivants :
+➔ “name” ⇒ chaussure
+➔ “description” ⇒ une paire de chaussures
+➔ “price” ⇒ 35
+➔ “quantity” ⇒ 120
+Si tout s'est bien passé, vous devriez avoir dans le terminal :
+
+FAIT :
+
+use shop
+
+db.product.insertOne({
+name: "chaussure",
+description: "une paire de chaussures",
+price: 35,
+quantity: 120
+})
