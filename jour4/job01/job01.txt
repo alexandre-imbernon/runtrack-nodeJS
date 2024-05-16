@@ -1,0 +1,12 @@
+Créez une base de données nommée “LaPlateforme” contenant les
+collections suivantes avec :
+● “student” avec les champs “id”, “lastname”, “firstname”,
+“students_number”, “year_id”
+● “year” avec le champ “year”
+
+FAIT : 
+
+use LaPlateforme
+
+db.createCollection("student")
+db.createCollection("year")

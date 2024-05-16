@@ -1,0 +1,9 @@
+Créez une nouvelle collection nommée “category” et insérez différentes
+catégories en une seule ligne de commande (au minimum 3).
+
+FAIT :
+
+db.category.insertMany([
+  {name: "1"},
+  {name: "2"},
+  {name: "3"}])

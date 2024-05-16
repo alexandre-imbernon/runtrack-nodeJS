@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "mongodb": "^6.6.2",
+    "mongoos": "^0.0.1-security",
+    "mongoose": "^8.3.5"
+  },
+  "name": "job02",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
